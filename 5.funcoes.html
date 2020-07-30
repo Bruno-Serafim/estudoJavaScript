@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funções</title>
+</head>
+<body>
+    <script>
+
+        //Função que não retorna nada 
+        //Importante: variáveis criadas dentro de uma função, existe apenas dentro da função
+        function soma(){
+            var a = 2, b = 3
+            var resultado = a + b
+            console.log(a + b)
+        }
+
+        soma()  //chamandoa função
+
+        //================================
+
+        //Função que retorna algo
+        function soma2(){
+            var a = 5, b = 5
+            var resultado = a + b
+            return resultado        //retornando a variável resultado 
+        }
+
+        var resultado = soma2() //chamando a função e guardandoo retorno da função soma 2 dentro de uma variável chamada resultado
+        console.log(resultado) //mostrando o resultado na tela
+
+        console.log(soma2()) //mostrando o retorno da função sem guardar em variável, basta chamar a função dentro do console.log
+
+        
+        //================================
+
+        //Função que recebe os valores por parametros e retorna algo 
+        function soma(numero1, numero2){     //criando a função e recebendo valores por parametros
+            var resultado = numero1 + numero2   //pegando os valores recebido por parametro e efetuando a soma
+            return resultado   //retornando a variável resultado 
+        }
+
+        //chamando a função, passando os valores 1 e 2 por parametros e guardandoo retorno da função soma 2 dentro de uma variável 
+        //chamada resultado
+        var resultado = soma(1,2) 
+
+        console.log(resultado) //mostrando o resultado na tela
+    
+    </script>    
+</body>
+</html>

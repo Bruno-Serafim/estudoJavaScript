@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variáveis e dados</title>
+</head>
+<body>
+    <script>
+
+        var nome = "Diego" //tipo string
+        var idade = 23 //tipo inteiro
+        var peso = 80.5 //tipo float
+        var humano = true //tipo booleano 
+        var alunos = ['Diego', 'Gabriel', 'Lucas'] //vetores
+
+        //objeto
+        var aluno = {
+            nome: 'Diego',
+            idade: 23,
+            peso: 80.5, 
+            humano: true,
+            nome2: alunos[2] //atribuindo a posição 2 do vetor alunos na propriedade nome2 do objeto aluno
+        }
+
+        console.log(nome) //mostrando a string nome
+        console.log(alunos) // mostrando o vetor alunos
+        console.log(alunos[0]) //mostrando a posição 0 do vetor
+        console.log(aluno) //mostrando o objeto aluno 
+        console.log(aluno.peso) //mostrando a propriedade peso do objeto aluno
+
+        /*
+        A variável vai armazenar algum tipo de valor
+
+        No javascript, não tem aquela tipagem estática como em outras linguagens, ela possui tipagem dinamica, ou seja, não precisa definir qual é o tipo
+        de valor da variável.
+        No javascript a variável pode armazenar valores diferentes independente do time do script
+
+        Variável sempre vai começar pela palavra chave var e depois o nome da variável e por ultimo o valo que a variável 
+        vai armazenar
+        */
+
+    </script>    
+</body>
+</html>
