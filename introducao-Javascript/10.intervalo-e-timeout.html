@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intervalo e timeout</title>
+</head>
+<body>
+    <script>
+      function exibeAlgo(){
+          console.log('Hello World')
+      }
+
+      setTimeout(exibeAlgo, 5000)  //vai chamar a função exibe algo depois de 5 segundos
+
+      //setInterval(exibeAlgo, 1000) // ficará executando a função exibeAlgo continuamente a cada 1 segundo
+
+      //quando se quer referenciar uma função em algum local, como nesse caso dentro do setInterval não se usa os parenteses
+      //Utilizar os parenteses nesse caso faria com que a função já executasse, não respeitando o método setInterval.
+    </script>    
+</body>
+</html>
