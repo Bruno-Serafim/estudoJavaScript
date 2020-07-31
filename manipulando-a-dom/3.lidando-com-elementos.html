@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lidando com Elementos</title>
+</head>
+<body>
+    <div id="app">
+        <input id="nome"/>
+    </div>
+    <script>
+        //createElement cria um elemento especificado pela 
+        var linkElement = document.createElement('a')
+        linkElement.setAttribute('href', 'https://rocketseat.com.br/') //coloca um atributo, nesse caso um href para o link
+        linkElement.setAttribute('title', 'Site da Rocketseat')
+        linkElement.setAttribute('target', 'blank')
+        var textElement = document.createTextNode('Acessar site da Rocketseat')  //cria um elemento texto
+        linkElement.appendChild(textElement)
+
+        var containerElement = document.querySelector('#app') //Referenciando a div de id app
+        containerElement.appendChild(linkElement) //colocando o elemento linkElement no containerElement
+
+        var inputElement = document.querySelector('#nome') //referencia o input de id nome criado no html
+        containerElement.removeChild(inputElement) //remove o input referenciado acima
+    </script>    
+</body>
+</html>
