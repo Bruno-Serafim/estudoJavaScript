@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos inline</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome">
+        <button class="botao">Adicionar</button>
+    </div>
+    <script>
+        //document referencia a arvore de elementos 
+        //getElementById busca um elemento com o Id --> exemplo: var inputElement = document.getElementById('nome')
+        //getElementByTagName busca o elemento pela tag, sempre retorna um vetor --> document.getElementsByTagName('input') poderia informar depois dos parenteses [posição do vetor]
+        //querySelector é outra forma de buscar um elemento com a diferença de que ela permite pecorrer a arvore de elementos especificando o caminho -->     var inputElement = document.querySelector('div#app input')
+        //querrySelectorAll mesmo que o querrySelector,porém, busca todos os elementos referenciados 
+        var inputElement = document.querySelector('input[name=nome]') //#para id --> (div#app)   []para atributo --> ('input[name=nome]')      .classe ---> button.botao
+        var btnElement = document.querySelector('button.botao')
+        
+        btnElement.onclick = function (){
+            var text = inputElement.value //esse value pega o conteudo do input
+            alert(text)
+        }
+        
+    </script>    
+</body>
+</html>
