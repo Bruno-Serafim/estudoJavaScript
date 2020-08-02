@@ -1,0 +1,41 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio</title>
+</head>
+<body>
+    <div class="app"></div>
+    <script>
+        /*==================================
+        3º Exercício
+        A partir do seguinte vetor:
+
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+        ● Diego
+        ● Gabriel
+        ● Lucas
+        */
+
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        var appElement = document.querySelector('.app')
+        var listaElement = document.createElement('ul')
+        appElement.appendChild(listaElement)
+
+
+        function prencheLista(vetor){
+            for(const item of vetor){
+                var li = document.createElement('li')
+                var textoLi = document.createTextNode(item)
+                li.appendChild(textoLi)
+                listaElement.appendChild(li)
+            }
+        }
+
+        prencheLista(nomes)
+    </script>    
+</body>
+</html>

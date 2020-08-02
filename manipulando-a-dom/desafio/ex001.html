@@ -1,0 +1,42 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio</title>
+</head>
+<body>
+    <div class="app">
+        <div class="box"></div>
+    </div>
+    <script>
+        /*==================================
+        1º Exercício
+        Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+        vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+        aparecer na tela.
+        */
+
+        var appElement = document.querySelector('.app')
+        var btnElement = document.createElement('button')
+        btnElement.setAttribute('id', 'botao')
+        var textoBotao = document.createTextNode('Adicionar Quadrado')
+        btnElement.appendChild(textoBotao)
+        appElement.appendChild(btnElement)
+
+        btnElement.onclick = quadrado
+
+        function quadrado(){
+            var quadradoElement = document.createElement('div')
+            var id = Math.random() * 5           
+            quadradoElement.setAttribute('id', `${id}`)
+            appElement.appendChild(quadradoElement)
+
+            quadradoElement.style.width = 100
+            quadradoElement.style.height = 100
+            quadradoElement.style.backgroundColor = '#f00'
+            
+            appElement.appendChild(document.createElement('br'))
+        }
+    </script>    
+</body>
+</html>

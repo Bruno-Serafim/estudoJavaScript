@@ -1,0 +1,70 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio</title>
+</head>
+<body>
+    <div class="app"></div>
+    <script>
+        /*==================================
+        2º Exercício
+        Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+        algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+
+        function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+        */
+
+        var appElement = document.querySelector('.app')
+        var btnElement = document.createElement('button')
+        btnElement.setAttribute('id', 'botao')
+        var textoBotao = document.createTextNode('Adicionar Quadrado')
+        btnElement.appendChild(textoBotao)
+        appElement.appendChild(btnElement)
+
+        btnElement.onclick = quadrado
+
+        function quadrado(){
+            var quadradoElement = document.createElement('div')
+            var id = Math.random() * 5
+            quadradoElement.setAttribute('id', `${id}`)
+            quadradoElement.setAttribute('onmouseover', `alterarCor(id)`)
+            appElement.appendChild(quadradoElement)
+
+            quadradoElement.style.width = 100
+            quadradoElement.style.height = 100
+            quadradoElement.style.backgroundColor = '#f00'
+            
+            appElement.appendChild(document.createElement('br'))
+
+            // var divElement = document.querySelectorAll('div')
+            // vet = divElement
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+            return color;
+        }
+        //var newColor = getRandomColor(); // #E943F0
+
+        function alterarCor(id){
+            var alterarCorQuadrado = document.getElementById(id)
+            var newColor = getRandomColor();
+            alterarCorQuadrado.setAttribute('style' , `width: 100px; height: 100px; background-color:${newColor}`)
+            //console.log(alterarCorQuadrado)
+        }
+    </script>    
+</body>
+</html>
